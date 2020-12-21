@@ -16,7 +16,7 @@ import java.util.stream.Stream;
 
 public class DataReader {
     private final static Logger logger = LogManager.getLogger();
-    private static final String DEFAULT_PATH = "src\\java\\resources\\data\\point.txt";
+    private static final String DEFAULT_PATH = "src//java//resources//data//point.txt";
 
     public List<String> tetrahedronReader(String fileName) throws CustomReaderException {
         Path path = FileValidator.fileValidation(fileName) ? Path.of(fileName) : Path.of(DEFAULT_PATH);
