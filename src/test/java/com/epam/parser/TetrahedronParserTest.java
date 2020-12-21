@@ -1,7 +1,6 @@
 package com.epam.parser;
 
 import com.epam.exception.CustomReaderException;
-import com.epam.factory.impl.TetrahedronFactoryImpl;
 import com.epam.model.entity.Point;
 import org.testng.Assert;
 import org.testng.annotations.Test;
