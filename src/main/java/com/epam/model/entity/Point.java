@@ -1,10 +1,9 @@
 package com.epam.model.entity;
 
-import java.util.Objects;
-
 public class Point {
     private double x;
     private double y;
+    private double z;
 
     public Point(double x, double y) {
         this.x = x;
@@ -30,19 +29,28 @@ public class Point {
         this.y = y;
     }
 
+    public double getZ() {
+        return z;
+    }
+
+    public void setZ(double z) {
+        this.z = z;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Point point = (Point) o;
         if (x != point.getX()) return false;
-        return y != point.getY();
+        if (y != point.getY()) return false;
+        return z != point.getZ();
 
     }
 
     @Override
     public int hashCode() {
-        int result = (int) (31 * x + y);
+        int result = (int) (31 * x + 19 * y + z);
         return result;
     }
 
